@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3 p-2 mt-5" *ngFor="let productGet of trainingList;">
+            <div class="card border-effect">
+                <div><img src="../../../../assets/images/dummy.png" width="100%" class="mb-5"></div>
+                <span class="rounded-pill fw-bold alert alert-danger p-2 mx-auto w-50 text-center">Web
+                    Development</span>
+                <h4 class="fw-bold m-3 text-center">{{productGet.trainingName}}</h4>
+                <button class="btn btn-success m-3" (click)="addCart(productGet)"><i class="fa-solid fa-cart-shopping"></i>
+                    Add to
+                    cart</button>
+            </div>
+        </div>
+    </div>
+</div>
