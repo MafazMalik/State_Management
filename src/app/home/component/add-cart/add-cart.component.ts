@@ -20,10 +20,7 @@ export class AddCartComponent {
 
   removeCart(product: any) {
 
-    const payload: any = {
-      product
-      // value: 'valueToRemove', // Replace 'valueToRemove' with the value you want to remove from the array
-    };
+    const payload: any = { product };
 
     this._store.dispatch(removeCart(payload));
   }

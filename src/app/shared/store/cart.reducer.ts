@@ -5,15 +5,15 @@ import { addCart, removeCart } from "./cart.action";
 const _cartReducer = createReducer(initialState,
     on(addCart, (state, payload) => {
         return {
-            ...state, //spread Operator
+            ...state,
             cart: [...state.cart, payload]
         };
     }),
     on(removeCart, (state, { product }) => {
-        const cartWithoutItem = state.cart.filter((cartItem: any) => cartItem !== product);
+        const removeItem = state.cart.filter((cartItem: any) => cartItem !== product);
         return {
           ...state,
-          cart: cartWithoutItem,
+          cart: removeItem,
         };
     }),
 )

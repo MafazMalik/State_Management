@@ -26,23 +26,7 @@ export class HomeComponent implements OnInit {
   getApiFun() {
     this._trainingService.getAll().subscribe((getAllProductData) => {
       this.trainingList = getAllProductData.rows;
-      console.log(this.trainingList);
     })
   }
 
-  // getApiFun() {
-  //   this._store.select('cart').subscribe((data) => {
-  //     if (data?.rows?.length) {
-  //       this.trainingList = data.rows;
-  //     } else {
-  //       this._trainingService.getAll().subscribe((trainingData) => {
-  //         if (trainingData?.rows?.length) {
-  //           this.trainingList = trainingData.rows;
-  //           this._store.dispatch(listCart());
-  //         }
-  //       })
-  //     }
-  //     console.log(this._store)
-  //   });
-  // }
 }
